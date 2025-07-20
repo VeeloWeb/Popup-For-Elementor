@@ -1,0 +1,21 @@
+name: Deploy to WordPress.org
+
+on:
+  push:
+    tags:
+      - "*"
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v3
+
+    - name: SVN Deploy
+      uses: 10up/action-wordpress-plugin-deploy@v2
+      with:
+        plugin_slug: popup-for-elementor
+        svn_username: ${{ secrets.WP_ORG_USERNAME }}
+        svn_password: ${{ secrets.WP_ORG_PASSWORD }}
