@@ -1,0 +1,363 @@
+.popup-plans {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    padding: 60px 20px;
+    max-width: 1440px;
+    margin: auto;
+    font-family: 'Inter', sans-serif;
+  }
+  @media (max-width: 1024px) {
+    .popup-plans {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  @media (max-width: 600px) {
+    .popup-plans {
+      grid-template-columns: 1fr;
+    }
+  }
+  .plan {
+    backdrop-filter: blur(18px);
+    background: linear-gradient(160deg, #5e00ff, #ff008f);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 40px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    text-align: left;
+    transition: border 0.3s ease, transform 0.3s ease;
+    border-radius: 20px;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.2);
+  }
+  .plan:hover {
+    border-color: #ffffff;
+    transform: translateY(-6px);
+  }
+  .plan h3,
+  .plan .price,
+  .plan small,
+  .plan p.desc,
+  .plan ul li {
+    color: #fff;
+  }
+  .plan h3 {
+    font-size: 16px;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin: 0 0 8px;
+    letter-spacing: 0.5px;
+  }
+  .plan .price {
+    font-size: 28px;
+    font-weight: 900;
+    margin: 0 0 4px;
+  }
+  .plan small {
+    font-size: 12px;
+    margin-bottom: 24px;
+    display: block;
+  }
+  .plan p.desc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .plan ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 24px;
+  }
+  .plan ul li {
+    font-size: 14px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    position: relative;
+  }
+  .plan ul li::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+    top: 8px;
+    border-radius: 2px;
+  }
+  .buy {
+    display: inline-block;
+    padding: 12px 26px;
+    background: #fff;
+    color: #5e00ff;
+    font-weight: 600;
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    margin-top: auto;
+    transition: all 0.3s ease;
+    border-radius: 40px;
+  }
+  .buy:hover {
+    background: #ffe6f3;
+    color: #ff008f;
+    box-shadow: 0 0 0 3px #ff008f;
+  }
+  .plan:nth-child(3) {
+    border: 2px solid #fff;
+    box-shadow: 0 0 12px 2px #ff008f;
+    transform: scale(1.02);
+  }
+  .plan:nth-child(3) .buy {
+    background: #ff008f;
+    color: #fff;
+    font-weight: 700;
+  }
+  .plan:nth-child(3) .buy:hover {
+    background: #fff;
+    color: #ff008f;
+    box-shadow: 0 0 0 3px #ff008f;
+  }
+  .buy.disabled {
+    background: transparent;
+    border: 2px solid #fff;
+    color: #fff;
+    pointer-events: auto;
+    cursor: pointer;
+  }
+
+
+  .popup-comparativa {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #1b1b3a, #302c80);
+    color: #fff;
+    padding: 60px 30px;
+    border-radius: 20px;
+    max-width: 1200px;
+    margin: 40px auto;
+    overflow: hidden;
+    box-shadow: 0 0 40px rgba(0,0,0,0.3);
+    animation: fadeIn 1s ease-in-out;
+  }
+  .popup-comparativa h2 {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+  }
+  .comparison-table {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border-radius: 16px;
+    overflow: hidden;
+  }
+  .comparison-table div {
+    padding: 22px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 1rem;
+    transition: background 0.3s ease, transform 0.2s ease;
+  }
+  .comparison-table div.header {
+    background: linear-gradient(90deg, #6e32f2, #4ac4f3);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1px;
+    font-size: 0.9rem;
+  }
+  .comparison-table div:nth-child(3n+1):not(.header):hover {
+    background: rgba(255, 255, 255, 0.07);
+    transform: translateX(5px);
+  }
+  .yes {
+    color: #7effa9;
+    font-weight: bold;
+    text-align: center;
+  }
+  .no {
+    color: #ff8686;
+    font-weight: bold;
+    text-align: center;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  @media (max-width: 900px) {
+    .comparison-table {
+      display: flex;
+      flex-direction: column;
+    }
+    .comparison-table div.header {
+      display: none;
+    }
+    .comparison-table div {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 16px;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      font-size: 0.95rem;
+    }
+    .comparison-table div:nth-child(3n+1):not(.header) {
+      transform: none;
+    }
+    .comparison-table div::before {
+      content: attr(data-label);
+      font-weight: bold;
+      color: #aaa;
+    }
+  }
+
+    .pfe-dashboard-wrapper {
+        font-family: 'Inter', sans-serif;
+        background-color: #0e0e17;
+        color: #fff;
+        padding: 40px 30px;
+        max-width: 1200px;
+        margin: auto;
+    }
+
+    .pfe-dashboard-welcome {
+        background: linear-gradient(135deg, #5e00ff, #a60fff);
+        border-radius: 20px;
+        padding: 30px;
+        margin-bottom: 40px;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    }
+
+    .pfe-dashboard-welcome h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        margin-bottom: 10px;
+    color: #ffffff;
+      }
+
+    .pfe-dashboard-welcome p {
+        font-size: 1.05rem;
+        color: #eee;
+    }
+
+    .pfe-dashboard-actions {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 24px;
+    margin-bottom: 50px;
+}
+
+    .pfe-dashboard-card {
+        background: linear-gradient(135deg, #1f1f2e, #2d2d4f);
+        padding: 25px;
+        border-radius: 16px;
+        text-align: center;
+        box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        transition: transform 0.3s, background 0.3s;
+    }
+
+    .pfe-dashboard-card:hover {
+        background: linear-gradient(135deg, #2d2d4f, #1f1f2e);
+        transform: translateY(-4px);
+    }
+
+    .pfe-dashboard-card a {
+        color: #fff;
+        text-decoration: none;
+        font-size: 1.1rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    .pfe-dashboard-card svg {
+        width: 24px;
+        height: 24px;
+        fill: #a060ff;
+    }
+
+    .pfe-faq, .pfe-plans {
+        background-color: #1c1c2b;
+        border-radius: 16px;
+        padding: 30px;
+    }
+
+    .pfe-faq h2, .pfe-plans h2 {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+        color: #fff;
+    }
+
+    .pfe-faq .faq-item {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #2e2e40;
+    }
+
+    .faq-question {
+        cursor: pointer;
+        padding: 15px;
+        background: #1f1f2e;
+        border-radius: 10px;
+        color: #fff;
+        font-weight: 600;
+        position: relative;
+        font-size: 16px;
+    }
+
+    .faq-answer {
+        display: none;
+        padding: 15px 15px 20px;
+        color: #ddd;
+        font-size: 0.95rem;
+    }
+
+    .faq-question:after {
+        content: '+';
+        position: absolute;
+        right: 20px;
+        font-weight: bold;
+        font-size: 18px;
+        color: #a060ff;
+    }
+
+    .faq-question.active:after {
+        content: '-';
+    }
+
+    .pfe-plans {
+        display: none;
+    }
+
+
+
+@media (max-width: 1200px) {
+  .pfe-dashboard-actions {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  .pfe-dashboard-actions {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+.pfe-dashboard-card.pfe-promo-card {
+  background: linear-gradient(135deg, #ff008f, #ff5ec4);
+  box-shadow: 0 6px 20px rgba(255, 0, 143, 0.5);
+}
+
+.pfe-dashboard-card.pfe-promo-card:hover {
+  background: linear-gradient(135deg, #ff33a6, #ff85d1);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(255, 0, 143, 0.6);
+}
+
+.pfe-dashboard-card.pfe-promo-card a {
+  color: #fff;
+}
+
+.pfe-dashboard-card.pfe-promo-card svg {
+  fill: #fff;
+}
+
+.pfe-dashboard-card.pfe-promo-card a.active {
+  box-shadow: 0 0 0 3px #ff008f;
+}

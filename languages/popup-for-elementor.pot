@@ -1,0 +1,346 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Popup for Elementor\n"
+"POT-Creation-Date: 2025-02-05 15:19+0000\n"
+"PO-Revision-Date: 2025-02-05 15:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: veelo info@veelo.es\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 3.5\n"
+"X-Poedit-Basepath: ../..\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;\" \"esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: popup-for-elementor/includes/editor-options.php:13
+msgid "Popup Widget"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:29
+msgid "Content"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:47
+msgid "Select Template"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:52
+msgid "Choose a template from your Elementor library."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:61
+msgid "Popup window"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:66
+msgid "Overlay Color"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:75
+msgid "Border Radius"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:90
+msgid "Box Shadow"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:93
+msgid "Configure the shadow settings directly."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:100
+msgid "Popup Width"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:104
+#: popup-for-elementor/includes/editor-options.php:133
+msgid "Auto (Fit Content)"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:105
+#: popup-for-elementor/includes/editor-options.php:134
+msgid "Custom"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:113
+msgid "Custom Width"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:129
+msgid "Popup Height"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:142
+msgid "Custom Height"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:159
+msgid "Horizontal Position"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:163
+#: popup-for-elementor/includes/editor-options.php:352
+msgid "Left"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:167
+#: popup-for-elementor/includes/editor-options.php:190
+msgid "Center"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:171
+#: popup-for-elementor/includes/editor-options.php:356
+msgid "Right"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:182
+msgid "Vertical Position"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:186
+msgid "Top"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:194
+msgid "Bottom"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:209
+msgid "Animation"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:214
+msgid "Entrance Animation"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:217
+#: popup-for-elementor/includes/editor-options.php:240
+msgid "None"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:218
+msgid "Fade In"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:219
+msgid "Fade In Up"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:220
+msgid "Fade In Down"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:221
+msgid "Fade In Left"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:222
+msgid "Fade In Right"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:223
+msgid "Zoom In"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:224
+msgid "Slide In Up"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:225
+msgid "Slide In Down"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:226
+msgid "Slide In Left"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:227
+msgid "Slide In Right"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:231
+msgid "Choose an animation for the popup to appear."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:237
+msgid "Exit Animation"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:241
+msgid "Fade Out"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:242
+msgid "Fade Out Up"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:243
+msgid "Fade Out Down"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:244
+msgid "Fade Out Left"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:245
+msgid "Fade Out Right"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:246
+msgid "Zoom Out"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:247
+msgid "Slide Out Up"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:248
+msgid "Slide Out Down"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:249
+msgid "Slide Out Left"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:251
+msgid "Slide Out Right"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:257
+msgid "Choose an animation for the popup to disappear."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:263
+msgid "Animation Duration (ms)"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:287
+msgid "Close Button"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:292
+msgid "Close Button Background"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:300
+msgid "Close Button Hover Background"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:309
+msgid "Close Button Color"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:317
+msgid "Close Button Hover Color"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:325
+msgid "Close Button Size"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:343
+msgid "Adjust the size of the close button."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:348
+msgid "Close Button Alignment"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:365
+msgid "Align the close button to the left or right."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:371
+msgid "Close Button Border Radius"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:385
+msgid "Controls the border radius of the close button."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:394
+msgid "Visibility"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:399
+msgid "Show on Page Load"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:402
+msgid ""
+"Activate to show popup when the page loads. Will disable other visibility "
+"options."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:412
+msgid "Enable Show After Delay"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:415
+msgid ""
+"Activate to show popup after a delay. Will disable other visibility options."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:425
+msgid "Delay (seconds)"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:434
+msgid "Show on Exit Intent"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:437
+msgid ""
+"Activate to show popup when the user intends to exit. Will disable other "
+"visibility options."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:447
+msgid "Enable Show on Scroll"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:450
+msgid ""
+"Activate to show popup when the user scrolls down a percentage of the page."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:460
+msgid "Scroll Percentage %"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:474
+msgid "Define how much the user must scroll before the popup appears."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:481
+msgid "Show Only Once"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:484
+msgid "Show the popup only once per session."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:498
+#: popup-for-elementor/includes/editor-options.php:508
+msgid "Refresh"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:505
+msgid "Refresh Popup"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:509
+msgid "Click to refresh the popup content."
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:595
+msgid "Edit Template"
+msgstr ""
+
+#: popup-for-elementor/includes/editor-options.php:731
+msgid "Popup for Elementor"
+msgstr ""
