@@ -10,12 +10,12 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v3
+    - name: Checkout Repository
+      uses: actions/checkout@v3
 
-      - name: SVN Deploy
-        uses: 10up/action-wordpress-plugin-deploy@42f0b27a7dd84e4a0a56f611fa37660cb6b4c353
-        with:
-          plugin_slug: popup-for-elementor
-          svn_username: ${{ secrets.WP_ORG_USERNAME }}
-          svn_password: ${{ secrets.WP_ORG_PASSWORD }}
+    - name: SVN Deploy
+      uses: 10up/action-wordpress-plugin-deploy@1.3.0
+      with:
+        plugin_slug: popup-for-elementor
+        svn_username: ${{ secrets.WP_ORG_USERNAME }}
+        svn_password: ${{ secrets.WP_ORG_PASSWORD }}
