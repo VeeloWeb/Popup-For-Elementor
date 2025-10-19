@@ -4,8 +4,13 @@
         const cookieName = config.cookieName || 'popup_seen'; 
         const cookieExpiry = parseInt(config.cookieExpiry, 10) || 7; 
         const delayInMilliseconds = parseInt(config.delay, 10) || 0; 
-        let isClosing = false; 
+        const isSelectorMode = (config.triggerBySelector === 'yes' && config.triggerSelector && config.triggerSelector.trim() !== '');
 
+        let isClosing = false; 
+        let popupOpenedAt = 0;   // marca de última apertura (ms)
+        let lastExitTs = 0;      // anti-rebote de exit-intent (ms)
+        const EXIT_COOLDOWN_MS = 1200;
+        
         const $popupOverlay = $('.popup-overlay');
         const $popupContent = $popupOverlay.find('.popup-content');
 
@@ -43,6 +48,7 @@
             }
 
             console.log("Showing popup.");
+            popupOpenedAt = Date.now();
             $popupOverlay.css({
                 display: 'flex',
                 visibility: 'visible',
@@ -58,42 +64,55 @@
 
         function closePopup() {
             console.log("Attempting to close popup...");
+        
+            if (popupOpenedAt && (Date.now() - popupOpenedAt) < 250) {
+                console.log("Close ignored due to debounce after open.");
+                return;
+            }
+        
             if (isClosing) {
                 console.log("Popup is already closing. Aborting.");
                 return;
             }
-
+        
             isClosing = true;
             console.log("Closing popup...");
-
+        
+            let handled = false;
             $popupContent
-                .removeClass('animate__fadeIn') 
-                .addClass('animate__fadeOut') 
-                .one('animationend webkitAnimationEnd oAnimationEnd MSAnimationEnd', function () {
+                .removeClass('animate__fadeIn')
+                .addClass('animate__fadeOut')
+                .one('animationend', function (e) {
+                    if (handled) return;
+                    if (e.target !== this) return; 
+                    handled = true;
+        
                     console.log("Fade-out animation ended. Hiding popup.");
                     $popupOverlay.css({
                         display: 'none',
                         visibility: 'hidden',
                         opacity: 0,
                     });
-                    $popupContent.removeClass('animate__fadeOut'); 
-                    isClosing = false; 
+                    $popupContent.removeClass('animate__fadeOut');
+                    isClosing = false;
                     console.log("Popup closed successfully.");
                 });
-
+        
             setTimeout(() => {
-                if (isClosing) {
+                if (!handled) {
                     console.warn("Fallback triggered: Forcing popup closure.");
+                    handled = true;
                     $popupOverlay.css({
                         display: 'none',
                         visibility: 'hidden',
                         opacity: 0,
                     });
                     $popupContent.removeClass('animate__fadeOut');
-                    isClosing = false; 
+                    isClosing = false;
                 }
-            }, 500); 
+            }, 700); 
         }
+        
 
         function handlePopupDisplay() {
             console.log("Entrando en la lógica de visibilidad...");
@@ -121,39 +140,44 @@
 
         if (config.exitIntent === 'yes') {
             console.log("IntentExit habilitado.");
+        
             $(document).on('mouseleave', function (e) {
-                console.log(`Intento de salida detectado: clientY = ${e.clientY}`);
-                if (e.clientY < 0) {
+                const now = Date.now();
+                const nearTop = (e.clientY <= 0 || e.clientY <= 20);
+                const leavingWindow = (e.relatedTarget === null);
+        
+                console.log(`Intento de salida: clientY=${e.clientY}, nearTop=${nearTop}, leaving=${leavingWindow}`);
+        
+                if (config.exitIntentDisplayMode === 'once' && getCookie(cookieName)) {
+                    console.log('ExitIntent en modo "once" y cookie presente. No se muestra.');
+                    return;
+                }
+        
+                if (isClosing || (popupOpenedAt && (now - popupOpenedAt) < 250)) {
+                    console.log('Ignorado: está cerrando o se acaba de abrir.');
+                    return;
+                }
+        
+                if (now - lastExitTs < EXIT_COOLDOWN_MS) {
+                    console.log('Cooldown activo. Ignorando ExitIntent repetido.');
+                    return;
+                }
+        
+                if (nearTop || leavingWindow) {
+                    lastExitTs = now;
                     console.log("Mostrando popup por IntentExit.");
                     showPopup();
+        
+                    if (config.exitIntentDisplayMode === 'once') {
+                        setCookie(cookieName, 'true', cookieExpiry);
+                        console.log(`Cookie "${cookieName}" marcada por ExitIntent durante ${cookieExpiry} días.`);
+                    }
                 }
             });
         } else {
             console.log("IntentExit no habilitado.");
         }
-        if (config.showOnScroll === 'yes') {
-            console.log(`On Scroll habilitado. Porcentaje configurado: ${config.scrollPercentage}%`);
 
-            let scrollTriggered = false; 
-
-            $(window).on('scroll', function () {
-                if (scrollTriggered) return; 
-
-                const scrollTop = $(window).scrollTop();
-                const windowHeight = $(window).height();
-                const documentHeight = $(document).height();
-                const scrolledPercentage = (scrollTop / (documentHeight - windowHeight)) * 100;
-
-                if (scrolledPercentage >= config.scrollPercentage) {
-                    console.log(`Porcentaje de scroll alcanzado: ${scrolledPercentage.toFixed(2)}%`);
-                    showPopup();
-                    scrollTriggered = true; 
-                    $(window).off('scroll'); 
-                }
-            });
-        } else {
-            console.log("On Scroll no habilitado.");
-        }
 
         $popupOverlay.on('click', function (e) {
             if ($(e.target).is($popupOverlay)) {
@@ -169,6 +193,19 @@
             }
         });
 
-        handlePopupDisplay();
-    });
-})(jQuery);
+        if (isSelectorMode) {
+            const raw = config.triggerSelector.trim();
+            const selector = /^[.#]/.test(raw) ? raw : ('.' + raw);
+            $(document).off('click.popupfeSelector');
+            console.log('[PopupFE] Trigger por selector activo →', selector, '| matches:', document.querySelectorAll(selector).length);
+            $(document).on('click.popupfeSelector', selector, function(e){
+              if ($popupOverlay.is(':visible') || isClosing) return;
+              showPopup();
+            });
+          }
+
+    
+            handlePopupDisplay();
+        });
+    })(jQuery);
+    
