@@ -1,99 +1,108 @@
 === Popup for Elementor ===  
 Contributors: veelo  
-Tags: popup, elementor, modal, wordpress popup, elementor free  
-Requires at least: 5.6  
-Tested up to: 6.9  
+Tags: popup, elementor, modal, wordpress popup, elementor free, popup maker, popup builder, modal window  
+Requires at least: 5.8  
+Tested up to: 6.8.3  
 Requires PHP: 7.4  
-Stable tag: 1.5.7  
+Stable tag: 1.5.8  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
-Create customizable popups using Elementor Free. Lightweight and easy to use — no coding or Elementor Pro required.
+Create powerful, customizable popups with **Elementor Free** — no coding or Elementor Pro required.
 
 == Description ==
 
-**Popup for Elementor** brings a native popup widget to **Elementor Free**. Design beautiful, responsive popups directly inside the Elementor editor with full control over appearance, triggers, and behavior.
+**Popup for Elementor** is the easiest and most lightweight popup builder for **Elementor Free**.  
+Design responsive, conversion-focused popups directly inside Elementor with full visual control — 100% no-code and performance-optimized.
 
-No need for Elementor Pro or third-party modal plugins. Everything you need is built-in.
+Unlike other popup plugins, this one works **without Elementor Pro** and **without third-party modal builders**. Everything is native, simple, and fast.
 
-### Features Included in the Free Version
+### 🔹 Key Features
 
-– **Design Freedom**  
-  Create pixel-perfect popups with Elementor. Customize layout, colors, borders, padding, animations, close button, overlay, and more.
+– **Design Freedom with Elementor**  
+  Build beautiful popups visually. Control layout, colors, padding, overlay, borders, animations, and close buttons.  
 
-– **Trigger Options (Free)**  
+– **Free Trigger Options (No Pro Needed)**  
   – Show on page load  
   – Show after a delay (in seconds)  
-  – Show on exit intent  
-  – Option to show only once (cookie-based)
+  – Show on exit intent *(improved)*  
+  – Show on click *(new in 1.5.8)*  
+  – Option to show only once (cookie-based, now works with all triggers)
 
-– **Popup Behavior Controls**  
+– **Smart Popup Behavior**  
   – Close popup on ESC key  
   – Close when clicking outside (overlay)  
-  – Option to disable right-click inside the popup
+  – Option to disable right-click inside popup content
 
 – **Elementor Template Integration**  
-  – Load any Elementor template inside the popup for maximum flexibility
+  – Load any Elementor section or saved template directly inside the popup for ultimate flexibility
 
-– **Performance Focused**  
-  – Clean and lightweight code  
-  – Optimized loading  
-  – Fully responsive  
-  – Compatible with any WordPress theme
+– **Performance-First**  
+  – Lightweight JavaScript and CSS  
+  – Clean code, no dependencies  
+  – Fully responsive and SEO-friendly  
+  – Works with any WordPress theme
 
 – **No Elementor Pro Required**  
-  All features are 100% compatible with **Elementor Free**
+  Every feature works natively with **Elementor Free**.
 
-**Pro version available** (optional):  
-The Pro version includes additional features and triggers, such as:  
-– Show on scroll  
-– Show on click  
-– Show on user inactivity  
-– Show based on referral URL  
-– Show on specific URLs or schedules  
-– Show based on login status  
+**Optional Pro Version:**  
+Adds advanced targeting and automation features:  
+– Scroll-based and inactivity triggers  
+– Referral URL and login-based display  
+– Time-scheduled popups  
 – AdBlock detection  
-– Dynamic content loading with enhanced performance  
-
-The free version works independently and does not require the Pro version.
+– Dynamic content loading for speed and personalization  
 
 **Official Website:** https://www.popupforelementor.com  
 **Developer:** https://www.veelo.es  
 **Support:** support@popupforelementor.com  
 We respond to support requests within 48 hours.  
-Live chat is also available on the official website with typical response times between 2 and 3 hours.
+Live chat available on our website with typical response times between 2 and 3 hours.
 
 == Installation ==
 
 1. Download the plugin ZIP file.  
-2. In your WordPress admin, go to **Plugins > Add New**.  
+2. In your WordPress admin, go to **Plugins → Add New**.  
 3. Click **Upload Plugin** and select the downloaded file.  
 4. Click **Install Now**, then **Activate**.  
-5. Go to **Elementor > Widgets** and search for **Popup for Elementor**.
+5. In Elementor, search for **Popup for Elementor** in the widget panel.
 
 == Frequently Asked Questions ==
 
 = Do I need Elementor Pro? =  
-No. This plugin works perfectly with **Elementor Free**.
+No. Popup for Elementor works perfectly with **Elementor Free**.
+
+= How do I make a popup appear when users click a button or link? =  
+Use the new **Click Trigger** (added in version 1.5.8).  
+You can set a CSS selector or Elementor element to open the popup.
 
 = Can I control when the popup appears? =  
-Yes. You can configure triggers: on load, after delay, or when the user is about to exit the page.
+Yes — you can trigger it **on load**, **after a delay**, **on click**, or **on exit intent**.
 
-= Can I prevent the popup from showing multiple times? =  
-Yes. You can activate the "show only once" option, which uses cookies to prevent repeated popups.
+= Can I show the popup only once? =  
+Yes. Enable the **Show only once** option to use a cookie that prevents the popup from appearing again.
 
 = Can I use Elementor templates inside the popup? =  
-Absolutely. You can insert any Elementor section or template inside the popup container.
+Absolutely. Load any Elementor template or section inside the popup container.
 
 == Screenshots ==
 
-1. Popup settings inside the Elementor editor  
-2. Triggers and visibility controls  
+1. Popup widget settings inside the Elementor editor  
+2. Trigger and visibility controls  
 3. Popup design customization  
 4. Example popup rendered on the page  
-5. Elementor template loaded in a popup
+5. Elementor template loaded inside a popup
 
 == Changelog ==
+
+= 1.5.8 =  
+* **New:** Added **Click Trigger** to the free version (previously Pro only).  
+* **Improved:** Exit Intent detection logic rewritten for smoother, more accurate behavior.  
+* **Improved:** “Show only once” option now works across all triggers.  
+* **Fix:** Minor issues when combining multiple triggers.  
+* **Update:** Tested up to WordPress 6.8.3 and Elementor 3.22+.  
+* **UI:** Minor visual and label adjustments in the widget controls.  
 
 = 1.5.7 =  
 * Fix: Close button works properly with all trigger configurations.  
@@ -114,9 +123,10 @@ Absolutely. You can insert any Elementor section or template inside the popup co
 * Added support for On Load, Delay, and Exit Intent triggers.  
 * Integrated cookie-based visibility control.  
 * Full Elementor Free compatibility.  
-* Pro version (optional) adds extended triggers: On Scroll, On Click, Referral-based, Inactivity, Schedule-based, Login detection, and AdBlock detection.
+* Pro version adds advanced targeting: scroll, referral, inactivity, schedule, login, and AdBlock detection.
 
 == Upgrade Notice ==
 
-= 1.5.7 =  
-Recommended update: improves stability, fixes close button behavior, and ensures compatibility with WordPress 6.9.
+= 1.5.8 =  
+🚀 Major update! Adds **Click Trigger** to the free version, improves Exit Intent detection, and enhances “Show only once” cookie logic.  
+Recommended update for all users.
