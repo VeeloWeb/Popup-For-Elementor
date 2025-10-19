@@ -510,6 +510,8 @@ $this->add_control("show_on_load", [
         "show_after_delay_enabled!" => "yes",
         "show_on_exit_intent!" => "yes",
         "show_once!" => "yes",
+        "trigger_selector_enabled!" => "yes", 
+
     ],
 ]);
 
@@ -522,6 +524,8 @@ $this->add_control("show_after_delay_enabled", [
         "show_on_load!" => "yes",
         "show_on_exit_intent!" => "yes",
         "show_once!" => "yes",
+        "trigger_selector_enabled!" => "yes", 
+
     ],
 ]);
 
@@ -531,6 +535,7 @@ $this->add_control("show_after_delay", [
     "default" => 3,
     "condition" => [
         "show_after_delay_enabled" => "yes",
+
     ],
 ]);
 
@@ -540,11 +545,29 @@ $this->add_control("show_on_exit_intent", [
     "default" => "",
     "description" => esc_html__("Activate to show popup when the user intends to exit. Will disable other visibility options.", "popup-for-elementor"),
     "condition" => [
-        "show_on_load!" => "yes",
+        "show_on_load!"             => "yes",
         "show_after_delay_enabled!" => "yes",
-        "show_once!" => "yes",
+        "show_once!"                => "yes",
+        "trigger_selector_enabled!" => "yes", 
+
     ],
 ]);
+
+// NUEVO: control interno del Exit Intent (no es switch)
+$this->add_control("exit_intent_display_mode", [
+    "label"       => esc_html__("Exit Intent — Display", "popup-for-elementor"),
+    "type"        => \Elementor\Controls_Manager::SELECT,
+    "default"     => "always",
+    "options"     => [
+        "always" => esc_html__("Always", "popup-for-elementor"),
+        "once"   => esc_html__("Only once", "popup-for-elementor"),
+    ],
+    "description" => esc_html__("Show the Exit Intent popup always or only once per visitor (cookie).", "popup-for-elementor"),
+    "condition"   => [
+        "show_on_exit_intent" => "yes",  // ← aparece solo si el trigger está activo
+    ],
+]);
+
 $this->add_control("show_once", [
     "label" => esc_html__("Show Only Once", "popup-for-elementor"),
     "type" => \Elementor\Controls_Manager::SWITCHER,
@@ -554,8 +577,43 @@ $this->add_control("show_once", [
         "show_on_load!" => "yes",
         "show_after_delay_enabled!" => "yes",
         "show_on_exit_intent!" => "yes",
+        "trigger_selector_enabled!" => "yes", 
+
     ],
 ]);
+
+$this->add_control('trigger_selector_enabled', [
+    'label'        => esc_html__('Trigger by selector (class or ID)', 'popup-for-elementor'),
+    'type'         => \Elementor\Controls_Manager::SWITCHER,
+    'label_on'     => esc_html__('Yes', 'popup-for-elementor'),
+    'label_off'    => esc_html__('No', 'popup-for-elementor'),
+    'return_value' => 'yes',
+    'default'      => '',
+    'description'  => esc_html__('Enter the class or ID name (without “.” or “#”). Example: my-button or popup-trigger. The popup will open when any element with that class or ID is clicked.', 'popup-for-elementor'),
+    'condition'    => [
+        'show_on_load!'             => 'yes',
+        'show_after_delay_enabled!' => 'yes',
+        'show_on_exit_intent!'      => 'yes',
+        'show_once!'                => 'yes',
+    ],
+]);
+
+
+
+$this->add_control('trigger_selector', [
+    'label'       => esc_html__('Element name (class or ID)', 'popup-for-elementor'),
+    'type'        => \Elementor\Controls_Manager::TEXT,
+    'placeholder' => esc_html__('e.g. my-button or popup-trigger', 'popup-for-elementor'),
+    'description' => esc_html__('Enter the class or ID name (without “.” or “#”). Example: my-button or popup-trigger.', 'popup-for-elementor'),
+    'condition'   => [
+        'trigger_selector_enabled' => 'yes', // ← solo dependemos del switch
+    ],
+]);
+
+
+
+
+
 
 $this->add_control("upgrade_to_pro_notice2", [
     "type" => \Elementor\Controls_Manager::RAW_HTML,
@@ -639,13 +697,18 @@ $this->end_controls_section();
 
         // Configuraciones dinámicas para pasar al script
         $config = [
-            'showOnLoad' => isset($settings['show_on_load']) && $settings['show_on_load'] === 'yes' ? 'yes' : 'no',
-            'delay' => isset($settings['show_after_delay']) ? (int) $settings['show_after_delay'] * 1000 : 0,
-            'exitIntent' => isset($settings['show_on_exit_intent']) && $settings['show_on_exit_intent'] === 'yes' ? 'yes' : 'no',
-            'showOnce' => isset($settings['show_once']) && $settings['show_once'] === 'yes' ? 'yes' : 'no',
-            'cookieName' => 'popup_seen',
-            'cookieExpiry' => 7,
+            'showOnLoad'  => isset($settings['show_on_load']) && $settings['show_on_load'] === 'yes' ? 'yes' : 'no',
+            'delay'       => isset($settings['show_after_delay']) ? (int) $settings['show_after_delay'] * 1000 : 0,
+            'exitIntent'  => isset($settings['show_on_exit_intent']) && $settings['show_on_exit_intent'] === 'yes' ? 'yes' : 'no',
+            'exitIntentDisplayMode' => !empty($settings['exit_intent_display_mode']) ? $settings['exit_intent_display_mode'] : 'always',
+            'showOnce'    => isset($settings['show_once']) && $settings['show_once'] === 'yes' ? 'yes' : 'no',
+            'cookieName'  => 'popup_seen',
+            'cookieExpiry'=> 7,
+                    'triggerBySelector' => (!empty($settings['trigger_selector_enabled']) && $settings['trigger_selector_enabled'] === 'yes') ? 'yes' : 'no',
+            'triggerSelector'   => !empty($settings['trigger_selector']) ? $settings['trigger_selector'] : '',
         ];
+        
+           
 
         // Pasar configuraciones dinámicas al script
         wp_localize_script(
