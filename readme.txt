@@ -1,10 +1,10 @@
 === Popup for Elementor ===  
 Contributors: veelo  
-Tags: popup, elementor, modal, wordpress popup, elementor free, popup maker, popup builder, modal window  
+Tags: popup, elementor, modal, wordpress popup  
 Requires at least: 5.8  
 Tested up to: 6.8.3  
 Requires PHP: 7.4  
-Stable tag: 1.5.8  
+Stable tag: 1.5.9  
 License: GPLv2 or later  
 License URI: https://www.gnu.org/licenses/gpl-2.0.html  
 
@@ -96,6 +96,11 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Changelog ==
 
+= 1.5.9 =  
+* **Fix:** Prevented rare fatal error caused by multiple declarations of `popup_for_elementor_register_assets()` on some setups.  
+* **Improved:** Script registration now fully guarded and compatible with all caching and optimization plugins.  
+* **Update:** Safe loading logic added to avoid duplicate includes.  
+
 = 1.5.8 =  
 * **New:** Added **Click Trigger** to the free version (previously Pro only).  
 * **Improved:** Exit Intent detection logic rewritten for smoother, more accurate behavior.  
@@ -127,6 +132,6 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.5.8 =  
-🚀 Major update! Adds **Click Trigger** to the free version, improves Exit Intent detection, and enhances “Show only once” cookie logic.  
-Recommended update for all users.
+= 1.5.9 =  
+🛠️ Fixes a rare **fatal error** that could occur when scripts were loaded twice.  
+Highly recommended update for all users to ensure full compatibility and stability.
