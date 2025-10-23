@@ -3,7 +3,7 @@
  * Plugin Name: Popup for Elementor
  * Plugin URI: https://www.popupforelementor.com
  * Description: Create powerful, fully customizable popups directly in Elementor Free — includes click, delay, load, and exit-intent triggers, animations, and smart visibility controls to boost user engagement.
- * Version: 1.6
+ * Version: 1.6.1
  * Author: Veelo
  * Author URI: https://www.veelo.es
  * Text Domain: popup-for-elementor
