@@ -96,6 +96,9 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Changelog ==
 
+= 1.6 =
+* **Fix:** File correction.
+
 = 1.5.9 =  
 * **Fix:** Prevented rare fatal error caused by multiple declarations of `popup_for_elementor_register_assets()` on some setups.  
 * **Improved:** Script registration now fully guarded and compatible with all caching and optimization plugins.  
@@ -132,6 +135,6 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.5.9 =  
+= 1.6 =  
 🛠️ Fixes a rare **fatal error** that could occur when scripts were loaded twice.  
 Highly recommended update for all users to ensure full compatibility and stability.
