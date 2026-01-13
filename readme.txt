@@ -2,11 +2,12 @@
 Contributors: veelo
 Tags: popup, elementor, modal, wordpress popup
 Requires at least: 5.8
-Tested up to: 6.8.3
+Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.6.2
+Stable tag: 1.6.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
+
 
 Create powerful, customizable popups with **Elementor Free** — no coding or Elementor Pro required.
 
@@ -100,6 +101,11 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Changelog ==
 
+= 1.6.3 =
+* Fix: Minor bug fixes.
+* Update: Compatibility adjustments for latest WordPress and Elementor versions.
+
+
 = 1.6.2 =
 * New: Added mobile fallback for Exit Intent (scroll + time). The popup now works on touch devices by showing after a minimum time and scroll depth.  
 * Improved: Cookie logic for "Show Once" — cookie is now set only when the user closes the popup (close button, overlay click, or Escape key).  
@@ -151,7 +157,6 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.6.2 =
-Now Exit Intent also works on mobile devices.  
-Popups trigger after scroll + time, and links inside popups are now fully clickable.  
-Highly recommended update for all users.
+= 1.6.3 =
+Minor bug fixes and compatibility updates for the latest versions of WordPress and Elementor.
+
