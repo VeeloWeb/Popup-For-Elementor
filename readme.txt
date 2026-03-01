@@ -101,6 +101,9 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Changelog ==
 
+= 1.6.5 =
+* Minor bug fixes and stability improvements.
+
 = 1.6.4 =
 * Fix: Prevented a brief visual flash of the internal editor modal header before popup initialization (FOUC issue in Elementor editor).
 * Improved: Modal now initializes hidden by default to ensure smoother rendering and better compatibility with optimized environments.
@@ -162,6 +165,5 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.6.4 =
-Fixes a brief visual flash in the Elementor editor and includes minor stability improvements.
-
+= 1.6.5 =
+* Minor bug fixes and stability improvements.
