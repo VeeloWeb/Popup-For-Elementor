@@ -900,7 +900,7 @@ echo '</div></div>';
 // this script needs to access it using parent.jQuery.
 // It must be echoed directly to stay bound to the button rendered in the iframe.
 
-        echo '<div id="custom-modal">
+echo '<div id="custom-modal" class="hide">
         <div class="modal-container">
             <div class="modal-header">
                 <div class="modal-title" style="display: flex; align-items: center;">
