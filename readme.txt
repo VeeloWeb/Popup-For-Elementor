@@ -4,7 +4,7 @@ Tags: popup, elementor, modal, wordpress popup
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.6.3
+Stable tag: 1.6.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -101,6 +101,11 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Changelog ==
 
+= 1.6.4 =
+* Fix: Prevented a brief visual flash of the internal editor modal header before popup initialization (FOUC issue in Elementor editor).
+* Improved: Modal now initializes hidden by default to ensure smoother rendering and better compatibility with optimized environments.
+* Update: Minor internal stability improvements.
+
 = 1.6.3 =
 * Fix: Minor bug fixes.
 * Update: Compatibility adjustments for latest WordPress and Elementor versions.
@@ -157,6 +162,6 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.6.3 =
-Minor bug fixes and compatibility updates for the latest versions of WordPress and Elementor.
+= 1.6.4 =
+Fixes a brief visual flash in the Elementor editor and includes minor stability improvements.
 
