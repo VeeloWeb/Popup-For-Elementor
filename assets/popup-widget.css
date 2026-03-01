@@ -46,3 +46,10 @@
     display: block !important;
 
 }
+#custom-modal.hide {
+    display: none;
+}
+
+#custom-modal.show {
+    display: flex;
+}
