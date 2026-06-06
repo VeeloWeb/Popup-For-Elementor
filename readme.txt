@@ -1,8 +1,8 @@
 === Popup for Elementor ===
 Contributors: veelo
 Tags: popup, elementor, modal, wordpress popup
-Requires at least: 5.8
-Tested up to: 6.9
+Requires at least: 6.6
+Tested up to: 7.0
 Requires PHP: 7.4
 Stable tag: 1.6.5
 License: GPLv2 or later
@@ -100,6 +100,10 @@ Absolutely. Load any Elementor template or section inside the popup container.
 5. Elementor template loaded inside a popup
 
 == Changelog ==
+
+= 1.6.6 =
+* Minor bug fix.
+* Tested WordPress 7.0
 
 = 1.6.5 =
 * Minor bug fixes and stability improvements.
