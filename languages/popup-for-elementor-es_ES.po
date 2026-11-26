@@ -1,0 +1,696 @@
+msgid ""
+msgstr "Project-Id-Version: Popup for Elementor\nPOT-Creation-Date: 2025-02-05 15:19+0000\nPO-Revision-Date: 2026-11-26 12:00+0000\nLast-Translator: \nLanguage-Team: veelo info@veelo.es\nLanguage: es_ES\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nX-Generator: Poedit 3.6\nX-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\nX-Poedit-SearchPath-0: .\n"
+
+#: includes/editor-options.php:506
+msgid "Activate to show popup after a delay. Will disable other visibility options."
+msgstr "Activa para mostrar el popup después de un retraso. Deshabilitará otras opciones de visibilidad."
+
+#: includes/editor-options.php:492
+msgid "Activate to show popup when the page loads. Will disable other visibility options."
+msgstr "Activa para mostrar el popup al cargar la página. Deshabilitará otras opciones de visibilidad."
+
+#: includes/editor-options.php:530
+msgid "Activate to show popup when the user intends to exit. Will disable other visibility options."
+msgstr "Activa para mostrar el popup cuando el usuario intente salir. Deshabilitará otras opciones de visibilidad."
+
+msgid "Activate to show popup when the user scrolls down a percentage of the page."
+msgstr "Activa para mostrar el popup cuando el usuario se desplace un porcentaje de la página."
+
+#: includes/admin-page.php:31
+msgid "Add another Popup Widget and choose its template and trigger. Each popup works independently."
+msgstr "Añade otro Popup Widget y elige su plantilla y su disparador. Cada popup funciona de forma independiente."
+
+#: includes/admin-page.php:28
+msgid "Add the popup widget"
+msgstr "Añade el widget de popup"
+
+#: includes/editor-options.php:432
+msgid "Adjust the size of the close button."
+msgstr "Ajusta el tamaño del botón de cerrar."
+
+msgid "Advanced stats (conversion rate, duration, unique users)"
+msgstr "Estadísticas avanzadas (ratio de conversión, duración, usuarios únicos)"
+
+msgid "Advanced triggers (scroll, click, AdBlock, etc.)"
+msgstr "Triggers avanzados (scroll, clic, AdBlock, etc.)"
+
+#: includes/editor-options.php:454
+msgid "Align the close button to the left or right."
+msgstr "Alinea el botón de cerrar a la izquierda o derecha."
+
+msgid "All"
+msgstr "Todos"
+
+#: includes/editor-options.php:546
+msgid "Always"
+msgstr "Siempre"
+
+#: includes/editor-options.php:288
+msgid "Animation"
+msgstr "Animación"
+
+#: includes/editor-options.php:342
+msgid "Animation Duration (ms)"
+msgstr "Duración de la Animación (ms)"
+
+#: includes/editor-options.php:124 includes/editor-options.php:169
+msgid "Auto (Fit Content)"
+msgstr "Automático (Ajustar al Contenido)"
+
+#: includes/editor-options.php:77
+msgid "Background Color"
+msgstr "Color de fondo"
+
+msgid "Basic stats (views, clicks, closures)"
+msgstr "Estadísticas básicas (vistas, clics, cierres)"
+
+msgid "Basic triggers (load, delay, exit intent, cookies)"
+msgstr "Triggers básicos (al cargar, retardo, salida, cookies)"
+
+#: includes/editor-options.php:95
+msgid "Border Radius"
+msgstr "Radio de Borde"
+
+#: includes/editor-options.php:246
+msgid "Bottom"
+msgstr "Abajo"
+
+msgid "Bounce Rate"
+msgstr "Tasa de Rebote"
+
+msgid "Bounce Rate (%)"
+msgstr "Tasa de Rebote (%)"
+
+#: includes/editor-options.php:110
+msgid "Box Shadow"
+msgstr "Sombra de Caja"
+
+#: includes/admin-page.php:16
+msgid "Build your template, add it to a page and choose when it appears."
+msgstr "Diseña tu plantilla, añádela a una página y elige cuándo aparece."
+
+msgid "Buy now"
+msgstr "Comprar ahora"
+
+#: includes/admin-page.php:37
+msgid "Can I use forms and shortcodes?"
+msgstr "¿Puedo usar formularios y shortcodes?"
+
+msgid "Can I use shortcodes or contact forms?"
+msgstr "¿Puedo usar shortcodes o formularios de contacto?"
+
+#: includes/editor-options.php:219 includes/editor-options.php:242
+msgid "Center"
+msgstr "Centro"
+
+msgid "Check out the Pro version"
+msgstr "Descubre la versión Pro"
+
+#: includes/admin-page.php:38
+msgid "Check the visibility settings. If a once-only display option is enabled, a cookie can prevent the popup from appearing again."
+msgstr "Revisa los ajustes de visibilidad. Si has activado una opción para mostrarlo solo una vez, una cookie puede impedir que vuelva a aparecer."
+
+#: includes/editor-options.php:51
+msgid "Choose a template from your Elementor library."
+msgstr "Elige una plantilla de tu biblioteca de Elementor."
+
+#: includes/editor-options.php:309
+msgid "Choose an animation for the popup to appear."
+msgstr "Elige una animación para que aparezca el popup."
+
+#: includes/editor-options.php:335
+msgid "Choose an animation for the popup to disappear."
+msgstr "Elige una animación para que desaparezca el popup."
+
+msgid "Choose this if you only need one installation."
+msgstr "Elige esta opción si solo necesitas una instalación."
+
+#: includes/admin-page.php:29
+msgid "Choose when it opens"
+msgstr "Elige cuándo se abre"
+
+#: includes/editor-options.php:609
+msgid "Click to refresh the popup content."
+msgstr "Haz clic para actualizar el contenido del popup."
+
+msgid "Clicks"
+msgstr "Clics"
+
+msgid "Clicks/Closures Ratio"
+msgstr "Ratio Clics/Cierres"
+
+#: includes/editor-options.php:366
+msgid "Close Button"
+msgstr "Botón de Cerrar"
+
+#: includes/editor-options.php:438
+msgid "Close Button Alignment"
+msgstr "Alineación del Botón de Cerrar"
+
+#: includes/editor-options.php:382
+msgid "Close Button Background"
+msgstr "Fondo del Botón de Cerrar"
+
+#: includes/editor-options.php:461
+msgid "Close Button Border Radius"
+msgstr "Radio del Borde del Botón de Cerrar"
+
+#: includes/editor-options.php:399
+msgid "Close Button Color"
+msgstr "Color del Botón de Cerrar"
+
+#: includes/editor-options.php:390
+msgid "Close Button Hover Background"
+msgstr "Fondo Hover del Botón de Cerrar"
+
+#: includes/editor-options.php:407
+msgid "Close Button Hover Color"
+msgstr "Color Hover del Botón de Cerrar"
+
+#: includes/editor-options.php:415
+msgid "Close Button Size"
+msgstr "Tamaño del Botón de Cerrar"
+
+#: includes/editor-options.php:750
+msgid "Close popup"
+msgstr "Cerrar popup"
+
+#: includes/editor-options.php:815
+msgid "Close template editor"
+msgstr "Cerrar editor de plantillas"
+
+msgid "Closure Rate"
+msgstr "Tasa de Cierre"
+
+msgid "Closure Rate (%)"
+msgstr "Tasa de Cierre (%)"
+
+msgid "Closures"
+msgstr "Cierres"
+
+msgid "Compare Plans"
+msgstr "Comparar planes"
+
+msgid "Compatible with Elementor Free"
+msgstr "Compatible con Elementor Free"
+
+#: includes/editor-options.php:112
+msgid "Configure the shadow settings directly."
+msgstr "Configura directamente los ajustes de sombra."
+
+msgid "Contact & Support"
+msgstr "Contacto y soporte"
+
+#: includes/admin-page.php:45
+msgid "Contact support"
+msgstr "Contactar con soporte"
+
+#: includes/editor-options.php:29
+msgid "Content"
+msgstr "Contenido"
+
+#: includes/editor-options.php:474
+msgid "Controls the border radius of the close button."
+msgstr "Controla el radio del borde del botón de cerrar."
+
+msgid "Conversion Rate"
+msgstr "Tasa de Conversión"
+
+msgid "Conversion Rate (%)"
+msgstr "Tasa de Conversión (%)"
+
+msgid "Conversion Rate, Closure Rate, and Bounce Rate"
+msgstr "Tasa de Conversión, Cierre y Rebote"
+
+#: includes/editor-options.php:62
+msgid "Create New Template"
+msgstr "Nueva plantilla"
+
+msgid "Create Popup Template"
+msgstr "Crear plantilla de popup"
+
+#: includes/admin-page.php:18
+msgid "Create a template"
+msgstr "Crear una plantilla"
+
+#: includes/admin-page.php:27
+msgid "Create the content"
+msgstr "Diseña el contenido"
+
+#: includes/editor-options.php:125 includes/editor-options.php:170
+msgid "Custom"
+msgstr "Personalizado"
+
+#: includes/editor-options.php:178
+msgid "Custom Height"
+msgstr "Altura Personalizada"
+
+#: includes/editor-options.php:133
+msgid "Custom Width"
+msgstr "Ancho Personalizado"
+
+msgid "Custom templates"
+msgstr "Plantillas personalizadas"
+
+msgid "Define how much the user must scroll before the popup appears."
+msgstr "Define cuánto debe desplazarse el usuario antes de que aparezca el popup."
+
+#: includes/editor-options.php:517
+msgid "Delay (seconds)"
+msgstr "Retraso (segundos)"
+
+#: includes/admin-page.php:27
+msgid "Design and save the content of your popup as an Elementor template."
+msgstr "Diseña y guarda el contenido de tu popup como una plantilla de Elementor."
+
+msgid "Designed for agencies and large projects."
+msgstr "Diseñado para agencias y grandes proyectos."
+
+#: includes/admin-page.php:35
+msgid "Do I need Elementor Pro?"
+msgstr "¿Necesito Elementor Pro?"
+
+msgid "Documentation"
+msgstr "Documentación"
+
+msgid "Download"
+msgstr "Descargar"
+
+#: includes/editor-options.php:672
+msgid "Edit Template"
+msgstr "Editar Plantilla"
+
+#: includes/admin-page.php:36
+msgid "Edit the saved Elementor template used by the widget. You can also open it with Edit Template in the widget preview."
+msgstr "Edita la plantilla guardada de Elementor que utiliza el widget. También puedes abrirla con Editar plantilla en la vista previa del widget."
+
+#: includes/admin-page.php:28
+msgid "Edit your page with Elementor, add Popup Widget and select your saved template."
+msgstr "Edita tu página con Elementor, añade Popup Widget y selecciona tu plantilla guardada."
+
+#: includes/editor-options.php:588
+msgid "Element name (class or ID)"
+msgstr "Nombre del elemento (clase o ID)"
+
+#: includes/editor-options.php:503
+msgid "Enable Show After Delay"
+msgstr "Habilitar Mostrar Después de un Retraso"
+
+msgid "Enable Show on Scroll"
+msgstr "Habilitar Mostrar al Desplazar"
+
+#: includes/editor-options.php:591
+msgid "Enter the class or ID name (without “.” or “#”). Example: my-button or popup-trigger."
+msgstr "Introduce el nombre de la clase o del ID (sin «.» ni «#»). Ejemplo: my-button o popup-trigger."
+
+#: includes/editor-options.php:576
+msgid "Enter the class or ID name (without “.” or “#”). Example: my-button or popup-trigger. The popup will open when any element with that class or ID is clicked."
+msgstr "Introduce el nombre de la clase o del ID (sin «.» ni «#»). Ejemplo: my-button o popup-trigger. El popup se abrirá al hacer clic en un elemento que coincida con el selector."
+
+#: includes/editor-options.php:293
+msgid "Entrance Animation"
+msgstr "Animación de Entrada"
+
+#: includes/editor-options.php:316
+msgid "Exit Animation"
+msgstr "Animación de Salida"
+
+#: includes/editor-options.php:542
+msgid "Exit Intent — Display"
+msgstr "Intención de salida — Visualización"
+
+msgid "FAQ"
+msgstr "FAQ"
+
+#: includes/editor-options.php:297
+msgid "Fade In"
+msgstr "Aparecer"
+
+#: includes/editor-options.php:299
+msgid "Fade In Down"
+msgstr "Aparecer Hacia Abajo"
+
+#: includes/editor-options.php:300
+msgid "Fade In Left"
+msgstr "Aparecer Hacia la Izquierda"
+
+#: includes/editor-options.php:301
+msgid "Fade In Right"
+msgstr "Aparecer Hacia la Derecha"
+
+#: includes/editor-options.php:298
+msgid "Fade In Up"
+msgstr "Aparecer Hacia Arriba"
+
+#: includes/editor-options.php:320
+msgid "Fade Out"
+msgstr "Desaparecer"
+
+#: includes/editor-options.php:322
+msgid "Fade Out Down"
+msgstr "Desaparecer Hacia Abajo"
+
+#: includes/editor-options.php:323
+msgid "Fade Out Left"
+msgstr "Desaparecer Hacia la Izquierda"
+
+#: includes/editor-options.php:324
+msgid "Fade Out Right"
+msgstr "Desaparecer Hacia la Derecha"
+
+#: includes/editor-options.php:321
+msgid "Fade Out Up"
+msgstr "Desaparecer Hacia Arriba"
+
+msgid "Feature"
+msgstr "Funcionalidad"
+
+msgid "Feature Comparison"
+msgstr "Comparativa de funcionalidades"
+
+#: includes/admin-page.php:43
+msgid "Find setup guidance or contact us for help with your popups."
+msgstr "Consulta las instrucciones de configuración o contacta con nosotros para recibir ayuda con tus popups."
+
+msgid "Free"
+msgstr "Gratis"
+
+msgid "Frequently Asked Questions"
+msgstr "Preguntas frecuentes"
+
+msgid "Get Popup for Elementor Pro"
+msgstr "Consigue Popup for Elementor Pro"
+
+msgid "Get access to exclusive Pro features including advanced triggers, powerful analytics, and VIP support. Boost conversions, engage smarter, and build popups without limits."
+msgstr "Accede a funciones exclusivas como triggers avanzados, estadísticas profesionales y soporte prioritario. Aumenta tus conversiones, conecta mejor y crea popups sin límites."
+
+#: includes/admin-page.php:25
+msgid "Getting started"
+msgstr "Primeros pasos"
+
+msgid "Global Conversion"
+msgstr "Conversión Global"
+
+msgid "Go to Templates > Saved Templates, and create a new section using the Popup widget."
+msgstr "Ve a Plantillas > Plantillas guardadas y crea una nueva sección usando el widget de Popup."
+
+#: includes/editor-options.php:370
+msgid "Hide Close Button"
+msgstr "Ocultar el botón cerrar"
+
+#: includes/editor-options.php:211
+msgid "Horizontal Position"
+msgstr "Posición Horizontal"
+
+msgid "How do I create a popup?"
+msgstr "¿Cómo creo un popup?"
+
+msgid "How do I unlock more features?"
+msgstr "¿Cómo desbloqueo más funciones?"
+
+msgid "Ideal for small teams and freelancers."
+msgstr "Ideal para pequeños equipos y freelancers."
+
+msgid "Interaction Rate"
+msgstr "Tasa de Interacción"
+
+#: includes/editor-options.php:215 includes/editor-options.php:442
+msgid "Left"
+msgstr "Izquierda"
+
+#: includes/editor-options.php:260
+msgid "Margin"
+msgstr "Margen"
+
+#: includes/admin-page.php:31
+msgid "More than one popup?"
+msgstr "¿Necesitas varios popups?"
+
+#: includes/admin-page.php:43
+msgid "Need a hand?"
+msgstr "¿Necesitas ayuda?"
+
+msgid "Need more triggers like Scroll, OnClick, or AdBlock detection?"
+msgstr "¿Necesitas más triggers como Scroll, OnClick o detección de AdBlock?"
+
+#: includes/editor-options.php:373 includes/editor-options.php:573
+msgid "No"
+msgstr "No"
+
+#: includes/admin-page.php:35
+msgid "No. Popup for Elementor works with Elementor Free."
+msgstr "No. Popup for Elementor funciona con Elementor Free."
+
+msgid "No. This plugin is fully compatible with Elementor Free."
+msgstr "No. Este plugin es totalmente compatible con Elementor Free."
+
+#: includes/editor-options.php:296 includes/editor-options.php:319
+msgid "None"
+msgstr "Ninguna"
+
+#: includes/editor-options.php:547
+msgid "Only once"
+msgstr "Solo una vez"
+
+#: includes/editor-options.php:86
+msgid "Overlay Color"
+msgstr "Color del Overlay"
+
+#: includes/editor-options.php:273
+msgid "Padding"
+msgstr "Relleno"
+
+msgid "Popup"
+msgstr "Popup"
+
+msgid "Popup Analytics Dashboard"
+msgstr "Panel de Análisis de Popups"
+
+#: includes/editor-options.php:165
+msgid "Popup Height"
+msgstr "Altura del Popup"
+
+#: includes/editor-options.php:14
+msgid "Popup Widget"
+msgstr "Widget de Popup"
+
+#: includes/editor-options.php:120
+msgid "Popup Width"
+msgstr "Ancho del Popup"
+
+#: includes/editor-options.php:689 includes/editor-options.php:813
+msgid "Popup for Elementor"
+msgstr "Popup para Elementor"
+
+#: popup-for-elementor.php:38
+msgid "Popup for Elementor requires Elementor to be installed and active."
+msgstr "Popup for Elementor necesita que Elementor esté instalado y activo."
+
+#: includes/editor-options.php:71
+msgid "Popup window"
+msgstr "Ventana emergente"
+
+msgid "Priority support"
+msgstr "Soporte prioritario"
+
+msgid "Pro"
+msgstr "Pro"
+
+#: includes/admin-page.php:34
+msgid "Quick answers"
+msgstr "Respuestas rápidas"
+
+#: includes/admin-page.php:44
+msgid "Read the documentation"
+msgstr "Consultar la documentación"
+
+#: includes/editor-options.php:598 includes/editor-options.php:608
+msgid "Refresh"
+msgstr "Actualizar"
+
+#: includes/editor-options.php:605
+msgid "Refresh Popup"
+msgstr "Actualizar Popup"
+
+msgid "Responsive popups"
+msgstr "Popups responsive"
+
+#: includes/editor-options.php:223 includes/editor-options.php:446
+msgid "Right"
+msgstr "Derecha"
+
+msgid "Scroll Percentage %"
+msgstr "Porcentaje de Desplazamiento %"
+
+#: includes/editor-options.php:47
+msgid "Select Template"
+msgstr "Seleccionar Plantilla"
+
+msgid "Select a popup to analyze its performance in detail."
+msgstr "Selecciona un popup para analizar su rendimiento detalladamente."
+
+msgid "Select the metric:"
+msgstr "Selecciona la métrica:"
+
+#: includes/admin-page.php:29
+msgid "Set the trigger in the widget visibility controls, then save and preview your page."
+msgstr "Configura el disparador en los controles de visibilidad del widget, guarda y previsualiza la página."
+
+#: includes/editor-options.php:556
+msgid "Show Only Once"
+msgstr "Mostrar Solo Una Vez"
+
+#: includes/editor-options.php:527
+msgid "Show on Exit Intent"
+msgstr "Mostrar al Intentar Salir"
+
+#: includes/editor-options.php:489
+msgid "Show on Page Load"
+msgstr "Mostrar al Cargar la Página"
+
+#: includes/editor-options.php:549
+msgid "Show the Exit Intent popup always or only once per visitor (cookie)."
+msgstr "Muestra el popup por intención de salida siempre o solo una vez por visitante (mediante cookie)."
+
+#: includes/editor-options.php:559
+msgid "Show the popup only once per session."
+msgstr "Muestra el popup solo una vez por sesión."
+
+#: includes/editor-options.php:304
+msgid "Slide In Down"
+msgstr "Deslizar Hacia Abajo"
+
+#: includes/editor-options.php:305
+msgid "Slide In Left"
+msgstr "Deslizar Hacia la Izquierda"
+
+#: includes/editor-options.php:306
+msgid "Slide In Right"
+msgstr "Deslizar Hacia la Derecha"
+
+#: includes/editor-options.php:303
+msgid "Slide In Up"
+msgstr "Deslizar Hacia Arriba"
+
+#: includes/editor-options.php:327
+msgid "Slide Out Down"
+msgstr "Deslizar Hacia Abajo"
+
+#: includes/editor-options.php:328
+msgid "Slide Out Left"
+msgstr "Deslizar Hacia la Izquierda"
+
+#: includes/editor-options.php:329
+msgid "Slide Out Right"
+msgstr "Deslizar Hacia la Derecha"
+
+#: includes/editor-options.php:326
+msgid "Slide Out Up"
+msgstr "Deslizar Hacia Arriba"
+
+msgid "Start without commitment"
+msgstr "Empieza sin compromiso"
+
+msgid "Thanks for using Popup for Elementor!"
+msgstr "¡Gracias por usar Popup for Elementor!"
+
+#: includes/editor-options.php:691
+msgid "This is an example popup. Select a template to display your own content."
+msgstr "Este es un popup de ejemplo. Selecciona una plantilla para mostrar tu propio contenido."
+
+#: includes/editor-options.php:238
+msgid "Top"
+msgstr "Arriba"
+
+msgid "Total Clicks"
+msgstr "Total de Clics"
+
+msgid "Total Closures"
+msgstr "Total de Cierres"
+
+msgid "Total Views"
+msgstr "Total de Vistas"
+
+#: includes/editor-options.php:570
+msgid "Trigger by selector (class or ID)"
+msgstr "Abrir mediante selector (clase o ID)"
+
+msgid "Try the plugin with basic features."
+msgstr "Prueba el plugin con funciones básicas."
+
+msgid "Unlock More Power"
+msgstr "Desbloquea Más Poder"
+
+msgid "Unlock the full power of Popup for Elementor."
+msgstr "Desbloquea todo el potencial de Popup for Elementor."
+
+msgid "Upgrade to Pro"
+msgstr "Actualiza a Pro"
+
+msgid "Upgrade to Pro and access all premium triggers and features."
+msgstr "Actualízate a Pro y accede a todos los triggers y funciones premium."
+
+msgid "Upgrade to Pro for advanced triggers like scroll, adblock detection, inactivity, plus detailed statistics and more."
+msgstr "Actualiza a Pro para obtener triggers avanzados como scroll, detección de AdBlock, inactividad, estadísticas detalladas y mucho más."
+
+#: includes/editor-options.php:234
+msgid "Vertical Position"
+msgstr "Posición Vertical"
+
+#: includes/admin-page.php:19
+msgid "View saved templates"
+msgstr "Ver plantillas guardadas"
+
+msgid "Views"
+msgstr "Vistas"
+
+msgid "Views, Closures, and Clicks"
+msgstr "Vistas, Cierres y Clics"
+
+#: includes/editor-options.php:484
+msgid "Visibility"
+msgstr "Visibilidad"
+
+msgid "Visual editor with Elementor"
+msgstr "Editor visual con Elementor"
+
+msgid "Want more power? "
+msgstr "¿Quieres más potencia?"
+
+#: includes/admin-page.php:36
+msgid "Where do I edit the popup content?"
+msgstr "¿Dónde edito el contenido del popup?"
+
+#: includes/admin-page.php:38
+msgid "Why does my popup not appear again?"
+msgstr "¿Por qué mi popup no vuelve a aparecer?"
+
+#: includes/editor-options.php:372 includes/editor-options.php:572
+msgid "Yes"
+msgstr "Si"
+
+#: includes/admin-page.php:37
+msgid "Yes. Add Elementor-compatible forms or shortcodes to your saved template."
+msgstr "Sí. Añade formularios o shortcodes compatibles con Elementor a tu plantilla guardada."
+
+msgid "Yes. You can embed any Elementor-compatible widget inside your popup template."
+msgstr "Sí. Puedes insertar cualquier widget compatible con Elementor dentro de tu plantilla de popup."
+
+#: includes/admin-page.php:15
+msgid "Your popups, in one place."
+msgstr "Tus popups, en un solo lugar."
+
+msgid "You’re using the free version — start building amazing popups today using your Elementor templates."
+msgstr "Estás usando la versión gratuita — empieza a crear popups increíbles hoy mismo usando tus plantillas de Elementor."
+
+#: includes/editor-options.php:302
+msgid "Zoom In"
+msgstr "Ampliar"
+
+#: includes/editor-options.php:325
+msgid "Zoom Out"
+msgstr "Reducir"
+
+#: includes/editor-options.php:590
+msgid "e.g. my-button or popup-trigger"
+msgstr "p. ej., my-button o popup-trigger"
