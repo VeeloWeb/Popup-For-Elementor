@@ -2,104 +2,146 @@
 Contributors: veelo
 Tags: popup, elementor, modal, wordpress popup
 Requires at least: 6.6
-Tested up to: 7.0
+Tested up to: 7.2
 Requires PHP: 7.4
-Stable tag: 1.6.6
+Requires Plugins: elementor
+Stable tag: 1.6.7
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-
-Create powerful, customizable popups with **Elementor Free** — no coding or Elementor Pro required.
+Create customizable popups with Elementor Free. Add multiple popups per page with independent triggers, animations and close controls.
 
 == Description ==
 
-✨ **Popup for Elementor** is the easiest and most lightweight popup builder for **Elementor Free**.  
-Design responsive, conversion-focused popups directly inside Elementor with full visual control — 100% no-code and performance-optimized. 🚀
+✨ **Your content. Your design. Your popups.**
 
-Unlike other popup plugins, this one works **without Elementor Pro** and **without third-party modal builders**. Everything is native, simple, and fast.
+Create customizable popups directly in **Elementor Free**, using the templates you already know how to build. Choose your content, style your popup and decide when it appears — **no coding or Elementor Pro required**.
 
-### 🔹 Key Features
+🚀 **New in 1.6.7: multiple popups on the same page!**
 
-– 🎨 **Design Freedom with Elementor**  
-  Build beautiful popups visually. Control layout, colors, padding, overlay, borders, animations, and close buttons.  
+Add a Popup Widget for each message, offer or announcement. Each popup has its own template, trigger and close controls, with **nothing extra to activate**.
 
-– ⚡ **Free Trigger Options (No Pro Needed)**  
-  – Show on page load  
-  – Show after a delay (in seconds)  
-  – Show on exit intent *(improved in 1.6.2)*  
-  – Show on click *(added in 1.5.8)*  
-  – Option to show only once (cookie-based, now works with all triggers)
+= 🎨 Design it your way =
 
-– 🧠 **Smart Popup Behavior**  
-  – Close popup on ESC key  
-  – Close when clicking outside (overlay)  
-  – Option to disable right-click inside popup content
+Make your popup feel at home on your website with responsive controls for:
 
-– 🧩 **Elementor Template Integration**  
-  – Load any Elementor section or saved template directly inside the popup for ultimate flexibility
+* **Size and placement:** width, height and alignment.
+* **Colors and spacing:** background, overlay, margins and padding.
+* **Finishing touches:** borders, shadows and close-button styling.
+* **Motion:** entrance and exit animations, with your chosen duration.
 
-– ⚙️ **Performance-First**  
-  – Lightweight JavaScript and CSS  
-  – Clean code, no dependencies  
-  – Fully responsive and SEO-friendly  
-  – Works with any WordPress theme
+The close button follows the popup's animation, appearing and disappearing with it.
 
-– 💡 **No Elementor Pro Required**  
-  Every feature works natively with **Elementor Free**.
+= ⚡ Open at the right moment =
 
-**Optional Pro Version:**  
-Adds advanced targeting and automation features:  
-– 📜 Scroll-based and inactivity triggers  
-– 🌐 Referral URL and login-based display  
-– 🕒 Time-scheduled popups  
-– 🚫 AdBlock detection  
-– ⚡ Dynamic content loading for speed and personalization  
+Choose the trigger that fits your content:
 
-**Official Website:** https://www.popupforelementor.com  
-**Developer:** https://www.veelo.es  
-**Support:** support@popupforelementor.com  
-We respond to support requests within 48 hours.  
-💬 Live chat available on our website with typical response times between 2 and 3 hours.
+* 🖱️ **On click:** open from a button, link, class or ID selector.
+* ⏱️ **After a delay:** give visitors a moment before showing your message.
+* 🚪 **On exit intent:** display a popup when the pointer leaves the page.
+* 👋 **On page load:** welcome visitors as they arrive.
+* 🍪 **Once-only display options:** use cookies to limit repeat appearances.
+
+📱 On touch devices and narrow screens, exit intent uses a time-and-scroll alternative. See the FAQ for details.
+
+= 🧩 One page, multiple popups =
+
+Give different messages their own space. **Popups work independently**, even when another one is already open.
+
+* Add as many Popup Widgets as your page needs.
+* Select a template and trigger for each widget.
+* The most recently opened popup appears on top.
+* Close one popup without closing the others.
+* Use **Escape** to close the topmost popup.
+
+= 🖼️ Bring your Elementor templates =
+
+Build your popup content as a saved Elementor template, then select it in the widget. Update the template whenever your message changes.
+
+A simple **editor-only example** helps you see the popup before selecting a template. It does not create a template in your library or add example content to your public website.
+
+= 🛠️ A clearer dashboard =
+
+Get started with **template shortcuts, a three-step setup guide, quick answers and support links**. No Pro upgrade banners or pricing panels.
+
+= 🌍 English and Spanish included =
+
+The dashboard, widget controls, options and help text are available in **English and Spanish**. WordPress uses the active interface language.
+
+= 💚 Built for Elementor Free =
+
+Create and manage your popups without an Elementor Pro subscription. Close them with the **X button, an overlay click or Escape**.
+
+= 💬 We're here to help =
+
+* 🌐 **Official website:** https://www.popupforelementor.com
+* 🧑‍💻 **Developer:** https://www.veelo.es
+* ✉️ **Support:** support@popupforelementor.com
 
 == Installation ==
 
-1. Download the plugin ZIP file.  
-2. In your WordPress admin, go to **Plugins → Add New**.  
-3. Click **Upload Plugin** and select the downloaded file.  
-4. Click **Install Now**, then **Activate**.  
-5. In Elementor, search for **Popup for Elementor** in the widget panel.
+1. Install and activate Elementor.
+2. Install Popup for Elementor through Plugins > Add New, or upload the plugin ZIP.
+3. Activate the plugin.
+4. Open Popup for Elementor in the WordPress dashboard and create an Elementor template for your popup content.
+5. Edit a page with Elementor, add Popup Widget and select the saved template.
+6. Choose the visibility trigger, adjust the appearance, and save and preview your page.
+7. To add another popup, add another Popup Widget and configure it independently.
 
 == Frequently Asked Questions ==
 
-= Do I need Elementor Pro? =  
-No. Popup for Elementor works perfectly with **Elementor Free**.
+= Do I need Elementor Pro? =
+No. The plugin works with Elementor Free.
 
-= How do I make a popup appear when users click a button or link? =  
-Use the **Click Trigger** (added in version 1.5.8).  
-You can set a CSS selector or Elementor element to open the popup.
+= Can I add multiple popups to the same page? =
+Yes. Add a Popup Widget for each popup and choose its template and trigger. Multiple popups work automatically, without an additional switch.
 
-= Can I control when the popup appears? =  
-Yes — you can trigger it **on load**, **after a delay**, **on click**, or **on exit intent**.
+= Can another popup open while one is already visible? =
+Yes. Popups open independently. The latest one appears on top, and each popup has its own close button. Escape closes the topmost popup.
 
-= Does Exit Intent work on mobile? =  
-Yes — since **1.6.2**, Exit Intent includes a **mobile fallback** that triggers after a minimum time on page and scroll depth.
+= How do I open a popup with a button or link? =
+Enable Trigger by selector in the widget visibility controls. Use a class selector such as .my-button or an ID selector such as #my-button. A name entered without a prefix is treated as a class.
 
-= Can I show the popup only once? =  
-Yes. Enable the **Show only once** option to use a cookie that prevents the popup from appearing again.  
-Since **1.6.2**, the cookie is set **when the user closes the popup** (X, overlay, or Escape).
+= Does exit intent work on mobile? =
+On touch devices or narrow screens, the plugin uses a mobile alternative: a scroll event after at least five seconds on the page and at least 35 percent scroll depth. This approximates engagement; it does not detect a mobile browser closing.
 
-= Can I use Elementor templates inside the popup? =  
-Absolutely. Load any Elementor template or section inside the popup container.
+= How does the once-only display option work? =
+The Show Only Once option opens the popup automatically and uses a cookie to suppress repeat displays. Exit intent also has its own Only once setting. The cookie is stored when the popup closes and lasts seven days; it is not limited to the current browser session.
+
+= What happens to existing popups when updating? =
+Existing Elementor templates and saved widget settings are retained. The first popup on a page keeps the existing frequency cookie; additional popups use their own cookies. As with any update, back up your site and check existing pages before deploying to a live site.
+
+= Where do I edit the popup content? =
+Edit the saved Elementor template selected in the widget. You can also open it with Edit Template in the widget preview.
+
+= Are English and Spanish included? =
+Yes. English is the source language. Spanish translations are included in the PO and compiled MO catalogs. WordPress selects the interface language according to the active locale.
 
 == Screenshots ==
 
-1. Popup widget settings inside the Elementor editor  
-2. Trigger and visibility controls  
-3. Popup design customization  
-4. Example popup rendered on the page  
-5. Elementor template loaded inside a popup
+1. Popup widget settings inside the Elementor editor.
+2. Trigger and visibility controls.
+3. Popup design customization.
+4. Example popup rendered on the page.
+5. Elementor template loaded inside a popup.
 
 == Changelog ==
+
+= 1.6.7 =
+* Tested with WordPress 7.2.
+* New: A simple translated example appears in the editor when no template is selected. No library template is created and example content is never displayed on the public site.
+* New: Automatic multiple-popups support with independent templates, triggers, state and close controls.
+* New: Popups can open simultaneously; the most recently opened appears on top and Escape closes the topmost popup.
+* Fix: Removed the one-popup-per-page restriction in the Elementor editor.
+* Fix: Prevented function redeclaration and duplicate widget identifiers when rendering multiple popups.
+* Fix: Restored close and reopen controls in the Elementor editor.
+* Fix: Synchronized the close button with popup entrance and exit animations and respected the configured animation duration.
+* Fix: Respected the delay activation control and isolated invalid selectors from other popups.
+* Fix: Unified close and frequency-cookie handling, including the mobile exit-intent alternative.
+* Improved: Replaced separate popup behavior scripts with one controller and per-widget configuration.
+* Improved: Redesigned the dashboard with template shortcuts, a setup guide, accessible FAQs and help links. Dashboard styles load only on its own screen.
+* Updated: Completed Spanish interface translations, regenerated the POT and PO catalogs, compiled the MO, and registered bundled translations.
+* Removed: Pro upgrade notices, pricing and feature comparison panels.
 
 = 1.6.6 =
 * Minor bug fix.
@@ -169,5 +211,5 @@ Absolutely. Load any Elementor template or section inside the popup container.
 
 == Upgrade Notice ==
 
-= 1.6.5 =
-* Minor bug fixes and stability improvements.
+= 1.6.7 =
+Adds automatic multiple popups, independent triggers and close controls, a redesigned dashboard and completed Spanish translations. Saved templates and widget settings are retained. Check existing pages and cookie-based display behavior after updating.
