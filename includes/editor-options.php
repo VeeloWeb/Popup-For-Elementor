@@ -64,22 +64,6 @@ class Popupfe_Popup_Widget extends \Elementor\Widget_Base
             "content_classes" => "elementor-control-field",
         ]);
 
-        $this->add_control("upgrade_to_pro_notice1", [
-            "type" => \Elementor\Controls_Manager::RAW_HTML,
-            "raw" => sprintf(
-                '<div style="margin-top: 20px; padding: 24px; background: linear-gradient(135deg, #1e1e1e, #2b2b2b); border: 1px solid #3c3c3c; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                    <strong style="display: block; color: #ffffff; font-size: 14px; font-weight: 300; margin-bottom: 12px;">%s</strong>
-                    <a href="%s" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #d33a92; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">
-                        %s
-                    </a>
-                </div>',
-                esc_html__("Need more triggers like Scroll, OnClick, or AdBlock detection?", "popup-for-elementor"),
-                "https://popupforelementor.com/en/home/#buy",
-                esc_html__("Get Popup for Elementor Pro", "popup-for-elementor")
-            ),
-            "content_classes" => "elementor-control-field",
-        ]);
-
         $this->end_controls_section();
 
         // Style controls
@@ -609,23 +593,6 @@ $this->add_control('trigger_selector', [
         'trigger_selector_enabled' => 'yes', // ← solo dependemos del switch
     ],
 ]);
-
-
-$this->add_control("upgrade_to_pro_notice2", [
-    "type" => \Elementor\Controls_Manager::RAW_HTML,
-    "raw" => sprintf(
-        '<div style="margin-top: 20px; padding: 24px; background: linear-gradient(135deg, #1e1e1e, #2b2b2b); border: 1px solid #3c3c3c; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-            <strong style="display: block; color: #ffffff; font-size: 14px; font-weight: 300; margin-bottom: 12px;">%s</strong>
-            <a href="%s" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #d33a92; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">
-                %s
-            </a>
-        </div>',
-        esc_html__("Need more triggers like Scroll, OnClick, or AdBlock detection?", "popup-for-elementor"),
-        "https://popupforelementor.com/en/home/#buy",
-        esc_html__("Get Popup for Elementor Pro", "popup-for-elementor")
-    ),
-    "content_classes" => "elementor-control-field",
-]);
 $this->end_controls_section();
     $this->start_controls_section("refresh_section", [
             "label" => esc_html__("Refresh", "popup-for-elementor"),
@@ -643,45 +610,8 @@ $this->end_controls_section();
                 'frontend_available' => true,
             ]
         );
-        $this->add_control("upgrade_to_pro_notice3", [
-            "type" => \Elementor\Controls_Manager::RAW_HTML,
-            "raw" => sprintf(
-                '<div style="margin-top: 20px; padding: 24px; background: linear-gradient(135deg, #1e1e1e, #2b2b2b); border: 1px solid #3c3c3c; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                    <strong style="display: block; color: #ffffff; font-size: 14px; font-weight: 300; margin-bottom: 12px;">%s</strong>
-                    <a href="%s" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #d33a92; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">
-                        %s
-                    </a>
-                </div>',
-                esc_html__("Need more triggers like Scroll, OnClick, or AdBlock detection?", "popup-for-elementor"),
-                "https://popupforelementor.com/en/home/#buy",
-                esc_html__("Get Popup for Elementor Pro", "popup-for-elementor")
-            ),
-            "content_classes" => "elementor-control-field",
-        ]);
         $this->end_controls_section();
-        $this->start_controls_section("upgrade_section", [
-            "label" => esc_html__("Popup for Elementor (PRO)", "popup-for-elementor"),
-            "tab"   => null,
-        ]);
-        
-        $this->add_control("pro_upgrade_box", [
-            "type" => \Elementor\Controls_Manager::RAW_HTML,
-            "raw" => sprintf(
-                '<div style="padding: 24px; background: linear-gradient(135deg, #1e1e1e, #2b2b2b); border: 1px solid #3c3c3c; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.2);">
-                    <h3 style="color: #ffffff; font-size: 16px; margin-bottom: 12px; font-weight: 600;">%s</h3>
-                    <p style="color: #bbbbbb; font-size: 13px; margin-bottom: 20px;">%s</p>
-                    <a href="%s" target="_blank" style="display: inline-block; padding: 10px 20px; background-color: #d33a92; color: #fff; border-radius: 4px; text-decoration: none; font-weight: 600; transition: background-color 0.3s;">
-                        %s
-                    </a>
-                </div>',
-                esc_html__("Unlock More Power", "popup-for-elementor"),
-                esc_html__("Upgrade to Pro and access all premium triggers and features.", "popup-for-elementor"),
-                "https://popupforelementor.com/en/home/#buy",
-                esc_html__("Upgrade to Pro", "popup-for-elementor")
-            ),
-        ]);
-        
-        $this->end_controls_section();
+
         
         
 
@@ -690,6 +620,8 @@ $this->end_controls_section();
     protected function render()
     {
         $settings = $this->get_settings_for_display();
+        $instance_key = get_the_ID() . '_' . $this->get_id();
+        $editor_suffix = '-' . $instance_key;
 
         // Configuraciones dinámicas para pasar al script
         $config = [
@@ -700,19 +632,13 @@ $this->end_controls_section();
             'showOnce'    => isset($settings['show_once']) && $settings['show_once'] === 'yes' ? 'yes' : 'no',
             'cookieName'  => 'popup_seen',
             'cookieExpiry'=> 7,
+            'instanceKey' => $instance_key,
+            'isEditor' => \Elementor\Plugin::$instance->editor->is_edit_mode(),
             'triggerBySelector' => (!empty($settings['trigger_selector_enabled']) && $settings['trigger_selector_enabled'] === 'yes') ? 'yes' : 'no',
             'triggerSelector'   => !empty($settings['trigger_selector']) ? $settings['trigger_selector'] : '',
         ];
         
            
-
-        // Pasar configuraciones dinámicas al script
-        wp_localize_script(
-            'popup-widget-js',
-            'PopupForElementorConfig',
-            $config
-        );
-
 
         // Obtener animaciones seleccionadas y duración
         $animation_in = $settings['popup_animation_in'] ?? 'animate__fadeIn';
@@ -720,6 +646,8 @@ $this->end_controls_section();
         $animation_duration = isset($settings['animation_duration_custom']['size'])
             ? (int) $settings['animation_duration_custom']['size']
             : 500;
+
+        $popup_content = "";
 
         // Renderizar plantilla de Elementor si está configurada
        if (!empty($settings['template_id']) && class_exists('\Elementor\Plugin')) {
@@ -740,7 +668,7 @@ $this->end_controls_section();
                    class="popup-edit-button elementor-button elementor-button-success elementor-size-sm button-edit-custom" 
 data-popup-id="' . esc_attr( 'popup_' . get_the_ID() . '_' . $settings['template_id'] ) . '"
                    data-edit-url="' . esc_url($edit_url) . '" 
-                   id="open-modal">
+                   id="open-modal' . esc_attr($editor_suffix) . '">
                    <i class="eicon-edit" style="margin-right: 8px;"></i>' . esc_html__('Edit Template', 'popup-for-elementor') . '
                 </a>
             </div>
@@ -751,14 +679,51 @@ data-popup-id="' . esc_attr( 'popup_' . get_the_ID() . '_' . $settings['template
 }
 
 
+        // Example content exists only in the editor and never creates a saved template.
+        $is_editor_preview = $config['isEditor'];
+        if (!$is_editor_preview && empty($settings['template_id']) && is_user_logged_in()) {
+            $preview = \Elementor\Plugin::$instance->preview;
+            $is_editor_preview = $preview && $preview->is_preview_mode()
+                && current_user_can('edit_post', get_the_ID());
+        }
+        $is_example = empty($settings['template_id']) && $is_editor_preview;
+        $example_content_style = '';
+        $example_close_style = '';
+        if ($is_example) {
+            $config['isEditor'] = true;
+            $config['isExample'] = true;
+            $popup_content = '<div class="popupfe-example-content">'
+                . '<h3 style="margin: 0 0 12px; color: inherit; font-size: 22px;">'
+                . esc_html__('Popup for Elementor', 'popup-for-elementor') . '</h3>'
+                . '<p style="margin: 0; font-size: 15px; line-height: 1.6;">'
+                . esc_html__('This is an example popup. Select a template to display your own content.', 'popup-for-elementor')
+                . '</p></div>';
+            $example_content_style = 'animation: none; position: relative; border-radius: 10px; box-shadow: 0 8px 30px rgba(0,0,0,.15); width: 400px; max-width: 90vw; box-sizing: border-box; padding: 60px 28px 28px; background: #fff; color: #1d2327;';
+            if (($settings['hide_close_button'] ?? '') !== 'yes') {
+                $example_close_style = 'display: flex; align-items: center; justify-content: center; position: absolute; top: 12px; right: 12px; width: 36px; height: 36px; padding: 0; border: 0; border-radius: 6px; background: #f0f0f1; color: #1d2327; font-size: 24px; line-height: 1; cursor: pointer;';
+            }
+        }
+
         // Generar un identificador único para el popup
         $current_page_id = get_the_ID();
-        $popup_id = get_post_meta($settings['template_id'], '_popup_id_' . $current_page_id, true);
+        if ($is_example) {
+            $popup_id = 'popup_' . $current_page_id . '_example';
+        } else {
+            $popup_id = get_post_meta($settings['template_id'], '_popup_id_' . $current_page_id, true);
 
-        if (empty($popup_id)) {
-            $popup_id = 'popup_' . $current_page_id . '_' . uniqid();
-            update_post_meta($settings['template_id'], '_popup_id_' . $current_page_id, $popup_id);
+            if (empty($popup_id)) {
+                $popup_id = 'popup_' . $current_page_id . '_' . uniqid();
+                update_post_meta($settings['template_id'], '_popup_id_' . $current_page_id, $popup_id);
+            }
+
         }
+
+        // Stable per-widget suffix also prevents collisions during partial editor refreshes.
+        $popup_id .= '_' . $this->get_id();
+        $config['animationIn'] = $animation_in;
+        $config['animationOut'] = $animation_out;
+        $config['animationDuration'] = $animation_duration;
+        $config['multiDelay'] = ($settings['show_after_delay_enabled'] ?? '') === 'yes' ? $config['delay'] : 0;
 
         // Renderizar el HTML del popup con ID único
         $styles = '';
@@ -767,7 +732,12 @@ data-popup-id="' . esc_attr( 'popup_' . get_the_ID() . '_' . $settings['template
             $styles = 'display: none; visibility: hidden; opacity: 1;';
         }
 
-        function filter_popup_content($content)
+        if ($is_example) {
+            // Standalone editor preview: do not rely on frontend CSS being printed yet.
+            $styles = 'display: flex; visibility: visible; opacity: 1; position: fixed; inset: 0; width: 100%; height: 100vh; align-items: center; justify-content: center; background: rgba(0,0,0,.5); z-index: 9999;';
+        }
+
+        $filter_popup_content = static function ($content)
         {
             // Lista de etiquetas peligrosas a eliminar (pero manteniendo SVGs y estilos de Elementor)
             $dangerous_tags = ['iframe', 'embed', 'object', 'applet', 'meta', 'link'];
@@ -778,19 +748,19 @@ data-popup-id="' . esc_attr( 'popup_' . get_the_ID() . '_' . $settings['template
             }
 
             return $content;
-        }
+        };
 
         /* Escaping is not applied here because the content has already been filtered
         by `filter_popup_content()`, which removes dangerous tags.
         Using `esc_html()` would break Elementor's functionality.
         This code has been reviewed and is safe. */
 
-        $popup_content_filtered = filter_popup_content($popup_content);
+        $popup_content_filtered = $filter_popup_content($popup_content);
 
-        echo '<div id="' . esc_attr($popup_id) . '" class="popup-overlay popup-widget" style="' . esc_attr($styles) . '">
+        echo '<div id="' . esc_attr($popup_id) . '" class="popup-overlay popup-widget" data-popupfe-config="' . esc_attr(wp_json_encode($config)) . '" style="' . esc_attr($styles) . '">
     <div class="popup-content animate__animated ' . esc_attr($animation_in) . '"
-         style="position: relative; animation-duration: ' . esc_attr($animation_duration) . 'ms;">
-         <button class="popup-close">&times;</button>';
+         style="position: relative; animation-duration: ' . esc_attr($animation_duration) . 'ms; ' . esc_attr($example_content_style) . '">
+         <button class="popup-close" style="' . esc_attr($example_close_style) . '" aria-label="' . esc_attr__('Close popup', 'popup-for-elementor') . '">&times;</button>';
          
 // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 echo $popup_content_filtered;
@@ -804,63 +774,9 @@ echo '</div></div>';
         echo '<script>
     (function($) {
         $(document).ready(function() {
-            const popup = $("#' .
-            esc_attr($popup_id) .
-            '");
-            const popupContent = popup.find(".popup-content");
-
-            if (popup.length) {
-                // Abrir popup con animación de entrada
-                popup.closest(".elementor-widget-popup_widget").off("click").on("click", function(e) {
-                    e.preventDefault();
-                    popup.css({
-                        display: "flex",
-                        visibility: "visible"
-                    });
-                    popupContent.removeClass("' .
-            esc_attr($animation_out) .
-            '").addClass("' .
-            esc_attr($animation_in) .
-            '");
-                });
-
-                // Cerrar popup con animación de salida
-                popup.find(".popup-close").off("click").on("click", function(e) {
-                    e.stopPropagation();
-                    popupContent
-                        .removeClass("' .
-            esc_attr($animation_in) .
-            '")
-                        .addClass("' .
-            esc_attr($animation_out) .
-            '");
-
-                    // Esperar la duración de la animación antes de ocultar el popup
-                    const duration = ' .
-            esc_attr($animation_duration) .
-            ';
-                    setTimeout(function() {
-                        popup.css({
-                            display: "none",
-                            visibility: "hidden"
-                        });
-                        popupContent.removeClass("' .
-            esc_attr($animation_out) .
-            '");
-                    }, duration);
-                });
-
-                // Hover en el botón para cambiar el fondo del popup
-                popup.find(".popup-edit-button").on("mouseenter", function() {
-                    popupContent.css("background-color", "#ffebf2");
-                }).on("mouseleave", function() {
-                    popupContent.css("background-color", "");
-                });
-            } else {
-                console.error("Popup element not found in the DOM.");
-            }
+            if (window.PopupFE) window.PopupFE.init();
         });
-		elementor.hooks.addAction("panel/open_editor/widget", function (panel, model) {
+        if (typeof elementor !== "undefined") elementor.hooks.addAction("panel/open_editor/widget", function (panel, model) {
     panel.$el.on("click", ".elementor-control-refresh_popup .elementor-button", function () {
         console.log("¡Botón clicado! Refrescando el widget...");
 
@@ -900,7 +816,7 @@ echo '</div></div>';
 // this script needs to access it using parent.jQuery.
 // It must be echoed directly to stay bound to the button rendered in the iframe.
 
-echo '<div id="custom-modal" class="hide">
+echo '<div id="custom-modal' . esc_attr($editor_suffix) . '" class="popupfe-custom-modal hide">
         <div class="modal-container">
             <div class="modal-header">
                 <div class="modal-title" style="display: flex; align-items: center;">
@@ -909,19 +825,19 @@ echo '<div id="custom-modal" class="hide">
                     </div>
                     ' . esc_html__("Popup for Elementor", "popup-for-elementor") . '
                 </div>
-                <button id="close-modal">&times;</button>
+                <button id="close-modal' . esc_attr($editor_suffix) . '" class="popupfe-close-modal" aria-label="' . esc_attr__('Close template editor', 'popup-for-elementor') . '">&times;</button>
             </div>
-            <iframe id="modal-iframe" src=""></iframe>
+            <iframe id="modal-iframe' . esc_attr($editor_suffix) . '" class="popupfe-modal-iframe" src=""></iframe>
         </div>
       </div>';
 
       echo '<script>
       (function($) {
           $(document).ready(function() {
-              const $modal = $("#custom-modal");
-              const $iframe = $("#modal-iframe");
-              const $closeButton = $("#close-modal");
-      
+              const $modal = $("#custom-modal' . esc_attr($editor_suffix) . '");
+              const $iframe = $modal.find(".popupfe-modal-iframe");
+              const $closeButton = $modal.find(".popupfe-close-modal");
+
               let originalPanelStyles = {}; // Guardamos los estilos originales
       
               function refreshWidget() {
@@ -975,7 +891,7 @@ echo '<div id="custom-modal" class="hide">
                   }
               }
       
-              $("#open-modal").on("click", function() {
+              $("#open-modal' . esc_attr($editor_suffix) . '").on("click", function() {
                   console.log("Modal abierto, reduciendo panel en la ventana principal...");
                   const editUrl = $(this).data("edit-url");
                   $iframe.attr("src", editUrl);
