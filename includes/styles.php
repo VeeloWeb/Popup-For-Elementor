@@ -66,7 +66,7 @@ function popupfe_dynamic_styles() {
         background-color: #de01f3;
     }
 
-    #custom-modal {
+    #custom-modal, .popupfe-custom-modal {
         display: none;
         position: fixed;
         top: 0;
@@ -82,7 +82,7 @@ function popupfe_dynamic_styles() {
         visibility: hidden;
         transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
     }
-    #custom-modal .modal-container {
+    #custom-modal .modal-container, .popupfe-custom-modal .modal-container {
         background: #ffffff;
         width: 95%;
         max-width: 100%;
@@ -95,7 +95,7 @@ function popupfe_dynamic_styles() {
         transform: translateY(-20px);
         transition: transform 0.3s ease-in-out;
     }
-    #custom-modal .modal-header {
+    #custom-modal .modal-header, .popupfe-custom-modal .modal-header {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -107,15 +107,15 @@ function popupfe_dynamic_styles() {
         position: relative;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
     }
-    #custom-modal .modal-header .modal-title {
+    #custom-modal .modal-header .modal-title, .popupfe-custom-modal .modal-header .modal-title {
         display: flex;
         align-items: center;
         gap: 10px;
     }
-    #custom-modal .modal-header i {
+    #custom-modal .modal-header i, .popupfe-custom-modal .modal-header i {
         font-size: 24px;
     }
-    #custom-modal #close-modal {
+    #custom-modal #close-modal, .popupfe-custom-modal .popupfe-close-modal {
         background: #e74c3c;
         border: none;
         color: white;
@@ -132,34 +132,34 @@ function popupfe_dynamic_styles() {
         justify-content: center;
         box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
-    #custom-modal #close-modal:hover {
+    #custom-modal #close-modal:hover, .popupfe-custom-modal .popupfe-close-modal:hover {
         background: #c0392b;
         color: #fff;
         transform: scale(1.1);
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     }
-    #custom-modal iframe {
+    #custom-modal iframe, .popupfe-custom-modal iframe {
         width: 100%;
         height: 100%;
         border: none;
         flex: 1;
     }
-    #custom-modal.show {
+    #custom-modal.show, .popupfe-custom-modal.show {
         opacity: 1;
         visibility: visible;
     }
-    #custom-modal.show .modal-container {
+    #custom-modal.show .modal-container, .popupfe-custom-modal.show .modal-container {
         transform: translateY(0);
     }
-    #custom-modal.hide {
+    #custom-modal.hide, .popupfe-custom-modal.hide {
         opacity: 0;
         visibility: hidden;
     }
-    #custom-modal.hide .modal-container {
+    #custom-modal.hide .modal-container, .popupfe-custom-modal.hide .modal-container {
         transform: translateY(-20px);
     }
     @media (max-width: 768px) {
-        #custom-modal .modal-container {
+        #custom-modal .modal-container, .popupfe-custom-modal .modal-container {
             height: 100%;
         }
     }
@@ -170,7 +170,7 @@ function popupfe_dynamic_styles() {
         'popupfe_dynamic_style',
         false,
         [],
-        '1.5.5'  // versión manual
+        '1.6.7'  // versión manual
     );
     wp_enqueue_style( 'popupfe_dynamic_style' );
 
